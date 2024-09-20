@@ -1,4 +1,4 @@
-//`import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+//import * as THREE from 'three';
 
 let recognition;
 let robotCommand = "";
@@ -61,25 +61,25 @@ function performRobotAction(action) {
 
     // You can use Three.js to animate the robot for actions like walking
     // Basic Three.js setup:
-   const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 500, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('robotCanvas') });
-    renderer.setSize(window.innerWidth, 500);
+  // const scene = new THREE.Scene();
+    //const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 500, 0.1, 1000);
+    //const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('robotCanvas') });
+    //renderer.setSize(window.innerWidth, 500);
 
-    const geometry = new THREE.BoxGeometry(1, 2, 1);
-   const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const robot = new THREE.Mesh(geometry, material);
-   scene.add(robot);
+    //const geometry = new THREE.BoxGeometry(1, 2, 1);
+   //const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    //const robot = new THREE.Mesh(geometry, material);
+   //scene.add(robot);
 
-    camera.position.z = 5;
+    //camera.position.z = 5;
 
-    function animate() {
-        requestAnimationFrame(animate);
-        if (action === 'walk_forward') {
-            robot.position.z -= 0.01; // Simulate walking forward
-        }
-        renderer.render(scene, camera);
-    }
+    //function animate() {
+      //  requestAnimationFrame(animate);
+       // if (action === 'walk_forward') {
+        //    robot.position.z -= 0.01; // Simulate walking forward
+       // }
+        //renderer.render(scene, camera);
+    //}
 
-    animate();
+    //animate();
 }
